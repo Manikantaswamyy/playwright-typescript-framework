@@ -15,7 +15,7 @@ export class Bookspage {
         for (let i = 0; i < count; i++) {
             const book = this.Bookslist.nth(i);
             const Booktext = await book.textContent();
-            if (Booktext?.includes(BookName)) {
+            if (Booktext?.trim().toLocaleLowerCase().includes(BookName.trim().toLowerCase())) {
                 Logger.info(`${BookName} found`);
                 await book.locator(".btnMainAddToCart").click();
                 Logger.info(`${BookName} added to cart`);
