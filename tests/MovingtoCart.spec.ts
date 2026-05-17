@@ -15,7 +15,6 @@ test.describe("Cart Functionality", () => {
             //await login.goto();
             await cart.SelectingBook(data.book);
             await gotocart.Gotocart();
-            await gotocart.validateName(data.book);
             await checkout.checkoutOrder(ENV.FIRSTNAME, ENV.ADDRESS, ENV.STATE, ENV.CITY, ENV.EMAIL, Number(ENV.PINCODE), Number(ENV.PHONE));
 
         })

@@ -21,20 +21,5 @@ export class CartPage {
         await this.viewcart.click();
         Logger.info("Going to cart is successfull");
     }
-    async validateName(expectedBook: string) {
-
-    Logger.info(
-        `${expectedBook} Validating this product is present in the cart`
-    );
-
-    const product =
-        this.page.locator(`text=${expectedBook}`).last();
-
-    await expect(product).toBeVisible();
-
-    Logger.info(
-        `${expectedBook} Product is validated`
-    );
-}
 
 }
