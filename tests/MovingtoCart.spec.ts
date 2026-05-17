@@ -1,5 +1,5 @@
 import { test, expect } from '../Fixtures/customFixtures';
-import books from '../test-data/books.json';
+import books from '../Test-data/books.json';
 import { ENV } from '../config/env';
 
 test.beforeEach("logging in", async ({ page }) => {
